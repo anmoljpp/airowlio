@@ -130,7 +130,7 @@ body {
 }
 
 .compatibility-icon {
-    width: 100px;
+    width: 180px;
     vertical-align: middle;
 }
 
@@ -138,7 +138,7 @@ body {
     color: var(--text-dark);
     font-size: 1.75rem;
     font-weight: 700;
-    margin: 0 0 20px;
+    margin: 0 0 50px;
 }
 
 .buy-now-button {
@@ -402,12 +402,13 @@ body {
     margin-bottom: 20px;
 }
 
-.open-source-section h3,
 .form-section h3 {
-    font-size: 1.5rem;
+    color: #1a1a1a;
+    font-size: 3rem;
     font-weight: 700;
-    margin: 0 0 15px;
+    margin: 0 0 20px 0;
 }
+
 
 .open-source-section p {
     font-size: 1rem;
