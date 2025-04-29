@@ -59,52 +59,100 @@ document.addEventListener('DOMContentLoaded', initSlideshow);
 const initScrollVideo = () => {
     const video = $('#intro-video');
     const videoSection = $('.video-section');
+    const nextSection = videoSection.nextElementSibling; // Get the following section
     
-    if (!video || !videoSection) {
-        console.error('Video elements missing:', { video, videoSection });
-        return;
-    }
+    if (!video || !videoSection || !nextSection) return;
 
-    // Ensure video is ready
+    // Set video attributes
     video.muted = true;
+    video.playsInline = true;
+    video.loop = false;
     video.currentTime = 0;
     video.pause();
 
-    const observer = new IntersectionObserver((entries) => {
+    // Check if mobile device
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+    // Add CSS for fade effect
+    const style = document.createElement('style');
+    style.textContent = `
+        .video-section.fade-out {
+            opacity: 0;
+            transition: opacity 0.5s ease 0.5s;
+        }
+        .video-section {
+            transition: opacity 0.5s ease;
+        }
+    `;
+    document.head.appendChild(style);
+
+    const handleIntersection = (entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 // When video enters viewport
+                videoSection.classList.remove('fade-out');
                 video.play().catch(e => {
                     console.log('Autoplay prevented:', e);
-                    // Fallback for browsers that block autoplay
                     video.muted = true;
                     video.play();
                 });
+                
+                if (isMobile) {
+                    video.addEventListener('timeupdate', handleTimeUpdate);
+                }
             } else {
                 // When video leaves viewport
                 video.pause();
                 video.currentTime = 0;
+                if (isMobile) {
+                    video.removeEventListener('timeupdate', handleTimeUpdate);
+                }
             }
         });
-    }, { 
-        threshold: 0.5, // Trigger when 50% of video is visible
-        rootMargin: '0px 0px -100px 0px' // Small negative margin to trigger slightly earlier
+    };
+
+    // Observe next section to fade out video
+    const nextSectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // When next section comes into view
+                videoSection.classList.add('fade-out');
+            } else {
+                // When next section leaves view
+                videoSection.classList.remove('fade-out');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // Mobile-specific loop handler
+    const handleTimeUpdate = () => {
+        if (video.currentTime > video.duration * 0.9) {
+            video.currentTime = 0;
+            video.play();
+        }
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, { 
+        threshold: 0.5,
+        rootMargin: '0px 0px -100px 0px'
     });
 
     observer.observe(videoSection);
+    nextSectionObserver.observe(nextSection);
 
-    // Optional: Add loading state
-    video.addEventListener('loadeddata', () => {
-        videoSection.classList.add('video-loaded');
+    // Clean up
+    window.addEventListener('resize', () => {
+        if (!isMobile) {
+            video.removeEventListener('timeupdate', handleTimeUpdate);
+        }
     });
 };
 
-// Update your initialization to keep all other functions
-document.addEventListener('DOMContentLoaded', () => {
-    initSlideshow();
-    initScrollVideo(); // This is now the simple version
-    initShowcaseVideo();
-});
+
+
+
+
+
 
 
 
