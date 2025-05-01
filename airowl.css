@@ -513,6 +513,70 @@ body {
     transform: translateY(-3px);
 }
 
+
+.anmol1,
+.anmol2,
+.anmol3 {
+  padding-left: 5%;
+  padding-right: 5%;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* Default Styles (for < 480px or base mobile) */
+.anmol1 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 150%;
+  color: rgb(94, 187, 62);
+}
+
+.anmol2 {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 125%;
+  color: rgb(22, 28, 45);
+}
+
+.anmol3 {
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 125%;
+  color: rgb(22, 28, 45);
+}
+
+/* For screen width ≥ 480px */
+@media (min-width: 480px) {
+  .anmol1 {
+    font-size: 20px;
+  }
+  .anmol2,
+  .anmol3 {
+    font-size: 34px;
+  }
+  .anmol4 {
+    font-size: 34px;
+  }
+}
+
+/* For screen width ≥ 768px */
+@media (min-width: 768px) {
+  .anmol1 {
+    font-size: 24px;
+    padding-left: 20%;
+    padding-right: 0;
+  }
+  .anmol2,
+  .anmol3 {
+    font-size: 46px;
+    padding-left: 20%;
+    padding-right: 0;
+  }
+}
+
+
+
 /* ========== Responsive Design ========== */
 @media (max-width: 1024px) {
     .hero-headline { font-size: 3.125rem; }
