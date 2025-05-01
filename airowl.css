@@ -19,7 +19,8 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
     color: var(--text-dark);
     background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
     line-height: 1.6;
@@ -130,8 +131,13 @@ body {
 }
 
 .compatibility-icon {
-    width: 180px;
+    width: 230px;
     vertical-align: middle;
+    padding-left: 30px;
+}
+
+.alexa{
+    width: 90px;
 }
 
 .benefit-text {
@@ -416,8 +422,7 @@ body {
     margin: 0 0 20px;
 }
 
-.github-button,
-.submit-button {
+.github-button{
     background-color: #28a745;
     color: white;
     font-size: 1rem;
@@ -540,6 +545,7 @@ body {
     .form-row { flex-direction: column; }
     .form-section input { width: 100%; }
     .compatibility-icon { width: 90px; vertical-align: middle; }
+    .alexa{width: 90px;}
     .slideshow-section { position: relative; width: 100%; height: 69vh; min-height: 0px; background: white; overflow: hidden;}
     .slideshow-container { position: sticky; top: 0; width: 100%; height: 69vh; display: flex; justify-content: center; align-items: center; perspective: 1000px; transform-style: preserve-3d; }
 
@@ -557,7 +563,8 @@ body {
     .feature-card { padding: 20px; }
     .feature-icon { width: 40px; height: 40px; }
     .slideshow-image { width: 100%; height: 50vh; }
-    .compatibility-icon { width: 75px; vertical-align: middle; }
+    .compatibility-icon { width: 105px; vertical-align: middle; padding-left: 10px; }
+    .alexa{width: 60px;} 
     #intro-video{ position: sticky; top: 0; width: 100%; height: 42vh; object-fit: cover; z-index: 1;}
     .slideshow-section { position: relative; width: 100%; height: 45vh; min-height: 0px; background: white; overflow: hidden; }
     .slideshow-container { position: sticky; top: 0; width: 100%; height: 40vh; display: flex; justify-content: center; align-items: center; perspective: 1000px; transform-style: preserve-3d; }
