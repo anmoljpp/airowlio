@@ -637,7 +637,7 @@ body {
     .feature-card { padding: 20px; }
     .feature-icon { width: 40px; height: 40px; }
     .slideshow-image { width: 100%; height: 50vh; top: 50%; }
-    .compatibility-icon { width: 70px; padding-left: 10px; }
+    .compatibility-icon { width: 100px; padding-left: 10px; }
     .alexa{width: 60px;} 
     #intro-video{ position: sticky; top: 0; width: 100%; height: 42vh; object-fit: cover; z-index: 1;}
     .slideshow-section { position: relative; width: 100%; height: 45vh; min-height: 0px; background: white; overflow: hidden; }
