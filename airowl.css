@@ -427,13 +427,23 @@ body {
     color: white;
     font-size: 1rem;
     font-weight: 500;
-    padding: 12px 30px;
+    padding: 12px 17px;
     border: none;
     border-radius: 25px;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
+.buynow-button{
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
 .github-button:hover,
 .submit-button:hover {
     background-color: #218838;
