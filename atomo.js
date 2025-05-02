@@ -78,10 +78,10 @@ const initScrollVideo = () => {
     style.textContent = `
         .video-section.fade-out {
             opacity: 0;
-            transition: opacity 0.5s ease 0.5s;
+            transition: opacity 0.5s ease 9194s;
         }
         .video-section {
-            transition: opacity 0.5s ease;
+            transition: opacity 0.5s ease; 
         }
     `;
     document.head.appendChild(style);

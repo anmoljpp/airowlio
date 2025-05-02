@@ -184,7 +184,7 @@ body {
     position: sticky;
     top: 0;
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     object-fit: cover;
     z-index: 1;
 }
@@ -238,7 +238,7 @@ body {
 .slideshow-section {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     min-height: 600px;
     background: white;
     overflow: hidden;
@@ -286,11 +286,12 @@ body {
 
 
 
+
 /* ========== Showcase Video Section ========== */
 .showcase-video-section {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     min-height: 600px;
     background-color: rgba(255, 255, 255, 0);
     opacity: 0;
@@ -311,11 +312,11 @@ body {
 
 #showcase-video {
     position: absolute;
-    top: 70%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    height: 100%;
+    height: 80%;
     object-fit: contain;
 }
 
@@ -342,8 +343,8 @@ body {
 /* ========== Partnership Section ========== */
 .partnership-section {
     background-color: white;
-    padding: 110px 20px;
-    min-height: 60vh;
+    padding: 30px 20px;
+    min-height: 28vh;
 }
 
 .partnership-grid {
@@ -382,7 +383,7 @@ body {
 /* ========== Community Section ========== */
 .community-section {
     padding: 80px 20px;
-    min-height: 60vh;
+    min-height: 38vh;
 }
 
 .community-container {
@@ -445,7 +446,7 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .github-button:hover,
-.submit-button:hover {
+.buynow-button:hover {
     background-color: #218838;
     transform: translateY(-3px);
 }
@@ -523,6 +524,40 @@ body {
     transform: translateY(-3px);
 }
 
+/* Connection Heading Styles */
+.connect-heading {
+    font-size: 46px; 
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 125%;
+    color: rgb(22, 28, 45);
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0 20px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .connect-heading {
+      font-size: 36px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .connect-heading {
+      font-size: 28px;
+      line-height: 120%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .connect-heading {
+      font-size: 22px;
+      line-height: 115%;
+      padding: 0 15px;
+    }
+  }
+
 
 .anmol1,
 .anmol2,
@@ -566,7 +601,7 @@ body {
     font-size: 34px;
   }
   .anmol4 {
-    font-size: 66px;
+    font-size: 46px;
   }
 }
 .anmol4{text-align: center;padding-top: 60px;}
@@ -637,8 +672,9 @@ body {
     .feature-card { padding: 20px; }
     .feature-icon { width: 40px; height: 40px; }
     .slideshow-image { width: 100%; height: 50vh; top: 50%; }
-    .compatibility-icon { width: 100px; padding-left: 10px; }
-    .alexa{width: 60px;} 
+    .compatibility-icon { width: 75px; padding-left: 5px; }
+    .appicons{ width: 100%;}
+    .alexa{width: 30px;} 
     #intro-video{ position: sticky; top: 0; width: 100%; height: 42vh; object-fit: cover; z-index: 1;}
     .slideshow-section { position: relative; width: 100%; height: 45vh; min-height: 0px; background: white; overflow: hidden; }
     .slideshow-container { position: sticky; top: 0; width: 100%; height: 40vh; display: flex; justify-content: center; align-items: center; perspective: 1000px; transform-style: preserve-3d; }
