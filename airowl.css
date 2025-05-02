@@ -268,7 +268,7 @@ body {
     will-change: opacity;
     /* Center the image */
     left: 50%;
-    top: 50%;
+    top: 38%;
     transform: translate(-50%, -50%);
     /* Initial stacking */
     z-index: 1;
@@ -327,7 +327,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px 20px;
+    padding: 80px -15px;
     background-color: white;
 }
 
@@ -342,7 +342,7 @@ body {
 /* ========== Partnership Section ========== */
 .partnership-section {
     background-color: white;
-    padding: 0px 20px;
+    padding: 110px 20px;
     min-height: 60vh;
 }
 
@@ -569,18 +569,18 @@ body {
     font-size: 66px;
   }
 }
-.anmol4{text-align: center;padding-top: 2px;}
+.anmol4{text-align: center;padding-top: 60px;}
 /* For screen width ≥ 768px */
 @media (min-width: 768px) {
   .anmol1 {
     font-size: 24px;
-    padding-left: 20%;
+    padding-left: 10%;
     padding-right: 0;
   }
   .anmol2,
   .anmol3 {
     font-size: 46px;
-    padding-left: 20%;
+    padding-left: 10%;
     padding-right: 0;
   }
 }
@@ -636,8 +636,8 @@ body {
     .buy-now-button { font-size: 0.8125rem; padding: 8px 25px; }
     .feature-card { padding: 20px; }
     .feature-icon { width: 40px; height: 40px; }
-    .slideshow-image { width: 100%; height: 50vh; }
-    .compatibility-icon { width: 105px; vertical-align: middle; padding-left: 10px; }
+    .slideshow-image { width: 100%; height: 50vh; top: 50%; }
+    .compatibility-icon { width: 70px; padding-left: 10px; }
     .alexa{width: 60px;} 
     #intro-video{ position: sticky; top: 0; width: 100%; height: 42vh; object-fit: cover; z-index: 1;}
     .slideshow-section { position: relative; width: 100%; height: 45vh; min-height: 0px; background: white; overflow: hidden; }
@@ -645,7 +645,7 @@ body {
     .showcase-video-section {
         height: auto;
         min-height: unset;
-        margin-bottom: -15px; /* Pulls the next section closer */
+        margin-bottom: 26px; /* Pulls the next section closer */
     }
     
     .showcase-video-section .video-container {
