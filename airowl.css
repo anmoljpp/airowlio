@@ -323,7 +323,7 @@ body {
 .background-image-section {
     position: relative;
     width: 100%;
-    min-height: 65vh;
+    min-height: 35vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -335,7 +335,7 @@ body {
     width: 100%;
     max-width: 1000px;
     height: auto;
-    padding-top: 25vh;
+    padding-top: 0vh;
     object-fit: contain;
 }
 
@@ -556,10 +556,10 @@ body {
     font-size: 34px;
   }
   .anmol4 {
-    font-size: 34px;
+    font-size: 66px;
   }
 }
-
+.anmol4{text-align: center;padding-top: 2px;}
 /* For screen width ≥ 768px */
 @media (min-width: 768px) {
   .anmol1 {
@@ -635,7 +635,7 @@ body {
     .showcase-video-section {
         height: auto;
         min-height: unset;
-        margin-bottom: -157px; /* Pulls the next section closer */
+        margin-bottom: -15px; /* Pulls the next section closer */
     }
     
     .showcase-video-section .video-container {
@@ -645,7 +645,7 @@ body {
     
     #showcase-video {
         position: relative;
-        height: auto;
+        height: 640px;
         top: 13px;
         left: auto;
         transform: none;
